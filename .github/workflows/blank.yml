@@ -1,0 +1,53 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v3
+
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |- tên: Tải lên một tạo phẩm công trình
+  sử dụng: hành động/upload-artifact@v3.1.3
+  với:
+    #Tên hiện vật
+    tên: # tùy chọn, mặc định là tạo tác
+    # Một tệp, thư mục hoặc mẫu ký tự đại diện mô tả nội dung cần tải lên
+    con đường:
+    # Hành vi mong muốn nếu không tìm thấy tệp nào bằng đường dẫn được cung cấp.
+Tùy chọn có sẵn:
+  cảnh báo: Đưa ra cảnh báo nhưng không thực hiện hành động
+  error: Thực hiện hành động thất bại kèm theo thông báo lỗi
+  bỏ qua: Không đưa ra bất kỳ cảnh báo hoặc lỗi nào, hành động không thất bại
+
+    if-no-files-found: # tùy chọn, mặc định là cảnh báo
+    # Khoảng thời gian sau đó hiện vật sẽ hết hạn tính bằng ngày. 0 có nghĩa là sử dụng lưu giữ mặc định.
+Tối thiểu 1 ngày. Tối đa 90 ngày trừ khi thay đổi từ trang cài đặt kho lưu trữ.
+
+    số ngày lưu giữ: # tùy chọn
+          echo Add other actions to build,
+          echo test, and deploy your project.
